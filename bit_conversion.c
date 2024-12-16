@@ -23,7 +23,7 @@ void converteBits() {
     printf("Digite o valor a ser convertido: ");
     scanf("%lf", &valor);
 
-    printf("Selecione a unidade de entrada:\n"
+    printf("Selecione a unidade do valor de entrada:\n"
         "1. Bits\n"
         "2. Bytes\n"
         "3. Kilobytes\n"
@@ -36,6 +36,7 @@ void converteBits() {
     // Converte o valor para bits
     double bits = Bits(valor, unidade);
 
+    // Verifica se o número digitado é inválido
     if (bits < 0) {
         printf("A unidade inválida.\n");
         return;
