@@ -8,7 +8,7 @@
 // Funcao para conversao de unidades
 double Watts(double valor, int unidade) {
     switch (unidade) {
-        case 1: return valor;                    // Valor em Watts
+        case 1: return valor;                    // Valor em Wattss
         case 2: return valor * 1000;             // kiloWatts para Watts
         case 3: return valor * 735.49875;        // cavalos-vapor para Watts
         default: return -1;                      // Unidade inválida
