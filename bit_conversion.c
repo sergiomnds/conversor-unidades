@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include "bit_conversion.h"
 
-/* Funções usadas para conversão de unidades */
+/* Switch usado para conversão das unidades a partir do valor em bits */
 double Bits(double valor, int unidade) {
     switch (unidade) {
         case 1: return valor;                                  // Bits
-        case 2: return valor * 8;                              // Bytes para Bits
-        case 3: return valor * 8 * 1024;                       // KB para Bits
-        case 4: return valor * 8 * 1024 * 1024;                // MB para Bits
-        case 5: return valor * 8 * 1024 * 1024 * 1024;         // GB para Bits
-        case 6: return valor * 8 * 1024 * 1024 * 1024 * 1024;  // TB para Bits
+        case 2: return valor * 8;                              // Bits para Bytes
+        case 3: return valor * 8 * 1024;                       // Bits para KB
+        case 4: return valor * 8 * 1024 * 1024;                // Bits para MB
+        case 5: return valor * 8 * 1024 * 1024 * 1024;         // Bits para GB
+        case 6: return valor * 8 * 1024 * 1024 * 1024 * 1024;  // Bits para TB
         default: return -1;                                    // Unidade inválida
     }
 }
@@ -42,19 +42,19 @@ void converteBits() {
         return;
     }
 
-    // Realiza as conversões para outras unidades
-    double bytes = bits / 8;
-    double kilobytes = bytes / 1024;
-    double megabytes = kilobytes / 1024;
-    double gigabytes = megabytes / 1024;
-    double terabytes = gigabytes / 1024;
+    // Realiza as conversões para outras unidades por ordem de grandeza
+    double bytes = bits / 8;                     //Bits para Bytes
+    double kilobytes = bytes / 1024;             //Bytes para Kilobytes (KB)
+    double megabytes = kilobytes / 1024;         //Kilobytes para Megabytes (MB)
+    double gigabytes = megabytes / 1024;         //Megabytes para GigaBytes (GB)
+    double terabytes = gigabytes / 1024;         //Gigabytes para Terabytes (TB)
 
     //Mostra os resultados das conversões
     printf("\nConversoes do valor:\n");
-    printf("Bits: %.2f\n", bits);
-    printf("Bytes: %.2f\n", bytes);
-    printf("Kilobytes: %.2f\n", kilobytes);
-    printf("Megabytes: %.2f\n", megabytes);
-    printf("Gigabytes: %.2f\n", gigabytes);
-    printf("Terabytes: %.2f\n", terabytes);
+    printf("Bits: %.2f\n", Bits);
+    printf("Bytes: %.2f\n", Bytes);
+    printf("Kilobytes: %.2f\n", Kilobytes);
+    printf("Megabytes: %.2f\n", Megabytes);
+    printf("Gigabytes: %.2f\n", Gigabytes);
+    printf("Terabytes: %.2f\n", Terabytes);
 }
