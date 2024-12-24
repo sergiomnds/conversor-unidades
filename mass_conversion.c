@@ -32,15 +32,16 @@ void mass_conversion() {
     }
   }
 
+  printf("Resultados:\n");
   for (int output_unit = KILOGRAM; output_unit <= TONS; output_unit++) {
     double result = conversions(value, input_unit, output_unit);
 
     if (output_unit == KILOGRAM) {
-      printf("Resultado: %.2lf kg\n", result);
+      printf("%.2lf kg\n", result);
     } else if (output_unit == GRAM) {
-      printf("Resultado: %.2lf g\n", result);
+      printf("%.2lf g\n", result);
     } else {
-      printf("Resultado: %.2lf t\n", result);
+      printf("%.2lf t\n", result);
     }
   }
 }
