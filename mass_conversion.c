@@ -18,13 +18,15 @@ void mass_conversion() {
   printf("Digite a unidade do valor de entrada:\n");
 
   while (true) {
-    printf("1 - Quilograma\n");
-    printf("2 - Grama\n");
-    printf("3 - Tonelada\n");
+    printf(
+        "1 - Quilograma\n"
+        "2 - Grama\n"
+        "3 - Tonelada\n"
+        "Opcao: ");
     scanf("%i", &input_unit);
 
     if (input_unit < 1 || input_unit > 3) {
-      printf("Unidade inválida! Por favor, insira valores entre 1 e 3: \n");
+      printf("Unidade invalida! Por favor, insira valores entre 1 e 3: \n");
     } else {
       break;
     }
