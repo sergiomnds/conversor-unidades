@@ -8,7 +8,7 @@ double conversions(double value, int input_unit, int output_unit);
 
 void mass_conversion() {
   // initializa as variaveis a serem utilizadas
-  double value = 0, result = 0;
+  double value = 0;
   int input_unit = 0;
 
   // Recebe a entrada do valor a ser convertido
