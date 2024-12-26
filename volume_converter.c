@@ -1,12 +1,6 @@
 #include "volume_converter.h"
 #include <stdio.h>
 
-void exibirMenu() {
-    printf("\n=== Conversor de Volume ===\n");
-    printf("1. Iniciar\n");
-    printf("2. Sair\n");
-}
-
 static double converterParaLitros(double valor, int unidadeOrigem) {
     switch (unidadeOrigem) {
         case 1: // Litros

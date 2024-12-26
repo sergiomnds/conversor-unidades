@@ -4,6 +4,7 @@
 #include "conversao_comprimento.h"
 #include "mass_conversion.h"
 #include "watts_conversion.h"
+#include "volume_converter.h"
 
 int main() {
   int conversao;
@@ -14,6 +15,7 @@ int main() {
       "2 - Watts\n"
       "3 - Comprimento\n"
       "4 - Massa\n"
+      "5 - Volume\n"
       "Opcao: ");
   scanf("%d", &conversao);
 
@@ -29,6 +31,9 @@ int main() {
       break;
     case 4:
       mass_conversion();  // Chama a função de coversão de massa
+      break;
+    case 5:
+      realizarConversao();  // Chama a função de coversão de volume
       break;
     default:
       printf("Opção inválida. Encerrando o programa.\n");
